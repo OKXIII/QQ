@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AC05EF8-744D-4988-A921-548B2CC4ADB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qq</RootNamespace>
+    <AssemblyName>qq</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>ftp://u440524.ftp.masterhost.ru/qqss.ru/www/qqclient/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.qqss.ru/qqclient/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>20</ApplicationRevision>
+    <ApplicationVersion>1.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>aberthol128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>qq.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9C54609CD0CB26A92A55B6AFB6C51CEBBC28DB6F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>qq_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comments.Designer.cs">
+      <DependentUpon>Comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlZ.cs" />
+    <Compile Include="GraphEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphEditor.Designer.cs">
+      <DependentUpon>GraphEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostingServies.cs" />
+    <Compile Include="Screenshot.cs" />
+    <Compile Include="FormScreenshot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreenshot.Designer.cs">
+      <DependentUpon>FormScreenshot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotKeys.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Azure\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Master\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Comments.resx">
+      <DependentUpon>Comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphEditor.resx">
+      <DependentUpon>GraphEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScreenshot.resx">
+      <DependentUpon>FormScreenshot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\Azure\qq.Azure.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Azure\Service1.wsdl" />
+    <None Include="Service References\Azure\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Azure\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Azure\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\qq.LocalService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LocalService\Service1.wsdl" />
+    <None Include="Service References\LocalService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Master\qq.Master.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Master\Service1.wsdl" />
+    <None Include="Service References\Master\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Master\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Master\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aberthol128.ico" />
+    <None Include="Resources\Administrative_Tools-64.ico" />
+    <None Include="Resources\Config-Tools.ico" />
+    <None Include="Resources\arrow-undo.ico" />
+    <None Include="Resources\cancel.ico" />
+    <None Include="Resources\save_accept.ico" />
+    <None Include="Resources\Rectangle Green.ico" />
+    <None Include="Resources\color-palette.ico" />
+    <None Include="Resources\stock_draw-ellipse-unfilled.ico" />
+    <None Include="Resources\rectangle.ico" />
+    <None Include="Resources\stock_draw-rectangle.ico" />
+    <None Include="Resources\stock_draw-line_4514.ico" />
+    <None Include="Resources\eraser_9436.ico" />
+    <None Include="Resources\pencil3_7194.ico" />
+    <None Include="Resources\highlight %281%29.ico" />
+    <None Include="Images\highlight.ico" />
+    <None Include="Service References\Master\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Master\configuration.svcinfo" />
+    <None Include="Service References\Master\configuration91.svcinfo" />
+    <None Include="Service References\Master\Service1.disco" />
+    <None Include="Service References\Azure\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Azure\configuration.svcinfo" />
+    <None Include="Service References\Azure\configuration91.svcinfo" />
+    <None Include="Service References\Azure\Service1.disco" />
+    <None Include="Service References\LocalService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LocalService\configuration.svcinfo" />
+    <None Include="Service References\LocalService\configuration91.svcinfo" />
+    <None Include="Service References\LocalService\Service1.disco" />
+    <None Include="qq_TemporaryKey.pfx" />
+    <None Include="Resources\folder-yellow-explorer-icon.png" />
+    <None Include="Resources\folder-yellow-explorer-icon %282%29.png" />
+    <None Include="Resources\Tpdkdesign.net-Refresh-Cl-Folder-yellow-explorer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Azure\" />
+    <WCFMetadataStorage Include="Service References\LocalService\" />
+    <WCFMetadataStorage Include="Service References\Master\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
